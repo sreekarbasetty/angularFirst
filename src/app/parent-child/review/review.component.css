@@ -1,0 +1,26 @@
+.reviewcontainer{
+    width:100%;
+    background-color: antiquewhite;
+    height: 300px;
+    position: relative;
+    text-align: center
+}
+
+.title{
+    width: 98%;
+    height: 15%;
+    background-color: grey;
+    margin-left: 10px;
+    position: relative;
+    text-align: center
+}
+.detail{
+    width: 98%;
+    height: 60%;
+    background-color: cadetblue;
+    margin-left: 10px;
+    margin-top: 10px;
+    position: relative;
+    text-align: center;
+    left: auto;
+}

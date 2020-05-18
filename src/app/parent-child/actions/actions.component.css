@@ -1,0 +1,16 @@
+.author{
+    width: 40%;
+    height: 60%;
+    background-color: rgb(7, 99, 161);
+    margin-left: 20px;
+    margin-top: 10px;
+    position: absolute;
+}
+.engagement{
+    width: 40%;
+    height: 60%;
+    background-color: rgb(7, 99, 161);
+    margin-left: 500px;
+    position: absolute;
+    margin-top: 10px;
+}

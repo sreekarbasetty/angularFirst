@@ -1,0 +1,26 @@
+.profilepicture{
+    width: 20%;
+    height: 90%;
+    background-color: grey;
+    margin-left: 30px;
+    margin-top: 10px;
+    position: absolute;
+    
+}
+.description{
+    width: 70%;
+    height: 60%;
+    background-color: rgb(7, 99, 161);
+    margin-left: 350px;
+    margin-top: 10px;
+    position: absolute;
+}
+
+.action{
+    width: 70%;
+    height: 30%;
+    background-color: rgb(161, 33, 39);
+    margin-left: 350px;
+    margin-top: 120px;
+    position: absolute;
+}
