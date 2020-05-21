@@ -1,0 +1,30 @@
+<!-- <p>for works!</p>
+{{friends}}
+<br>
+{{salary}}
+
+<table border="1">
+    <tr *ngFor="let fr of friends">
+        <td>{{fr.id}}</td>
+        <td>{{fr.name}}</td>
+        <td>{{fr.score}}</td>
+        <td><button (click)="changescore(fr)">Add by 1</button></td>
+    </tr>
+</table>
+
+<ol>
+    <li *ngFor="let s of salary">
+        {{ s }}
+    </li>
+</ol> -->
+
+<table border="1" align="center">
+    <tr *ngFor="let fr of users">
+        <td>{{fr.id}}</td>
+        <td>{{fr.name}}</td>
+        <td>{{fr.username}}</td>
+        <td>{{fr.address.geo.lat}}</td>
+        <td>{{fr.address.geo.lng}}</td>
+        <td>{{fr.company.name}}</td>
+    </tr>
+</table>
