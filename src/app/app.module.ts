@@ -15,6 +15,9 @@ import { DescriptionComponent } from './parent-child/description/description.com
 import { ActionsComponent } from './parent-child/actions/actions.component';
 import { AuthorComponent } from './parent-child/author/author.component';
 import { EngagementComponent } from './parent-child/engagement/engagement.component';
+import { AlldirectivesComponent } from './directives/alldirectives/alldirectives.component';
+import { IfComponent } from './directives/if/if.component';
+import { ForComponent } from './directives/for/for.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +33,10 @@ import { EngagementComponent } from './parent-child/engagement/engagement.compon
     DescriptionComponent,
     ActionsComponent,
     AuthorComponent,
-    EngagementComponent
+    EngagementComponent,
+    AlldirectivesComponent,
+    IfComponent,
+    ForComponent
   ],
   imports: [
     BrowserModule,
