@@ -1,10 +1,10 @@
 <p>ngstyle works!</p>
 <div class="row d-flex justify-content-center" >
     <div class="col-3  " style="border-style: solid;color:brown;padding: 10px;">
-        <div style="border: 1px solid black; width: 250px;text-align: center;">
+        <div style="border: 1px solid black; text-align: center;">
             <div [ngStyle]="{
                             backgroundColor:getcolor(255,redcode,redcode)
-                            }" style="width: 250px;">
+                            }" >
                             Red color
             </div>
             
@@ -16,10 +16,10 @@
             </div>
             </div>
             <br>
-            <div style="border: 1px solid black; width: 250px;text-align: center;">
+            <div style="border: 1px solid black; text-align: center;">
             <div [ngStyle]="{
                 backgroundColor:getcolor(greencode,255,greencode)
-                }" style="width: 250px;">
+                }" >
                 Green color
             </div>
             <p>background color HEX code: {{ getHexCode(greencode,255,greencode)}}</p>
@@ -30,10 +30,10 @@
             </div>
             </div>
             <br>
-            <div style="border: 1px solid black; width: 250px;text-align: center;">
+            <div style="border: 1px solid black;text-align: center;">
             <div [ngStyle]="{
                 backgroundColor:getcolor(bluecode,bluecode,255)
-                }" style="width: 250px;">
+                }" >
                 Blue color
             </div>
             
@@ -46,7 +46,7 @@
             </div>
     </div>
     <div class="col-3" style="border-style: solid;color:brown;margin-left: 30px; padding: 10px;">
-        <div style="border: 1px solid black; width: 250px;text-align: center;">
+        <div style="border: 1px solid black; text-align: center;">
             Red:<div [ngStyle]="{
                 color:getcolor(255,redtextcode,redtextcode)
                 }">Red Text
@@ -58,7 +58,7 @@
                 <label>{{ redtextcode }}</label>
             </div>
         </div>
-        <div style="border: 1px solid black; width: 250px;text-align: center;">
+        <div style="border: 1px solid black; text-align: center;">
         Green:<p [ngStyle]="{
             color:getcolor(greentextcode,255,greentextcode)
             }">Green Text
@@ -70,7 +70,7 @@
                 <label>{{ greentextcode }}</label>
             </div>
         </div>
-        <div style="border: 1px solid black; width: 250px;text-align: center;">
+        <div style="border: 1px solid black; text-align: center;">
             Blue:<p [ngStyle]="{
                 color:getcolor(bluetextcode,bluetextcode,255)
                 }">Blue Text
