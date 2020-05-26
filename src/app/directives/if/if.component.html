@@ -1,1 +1,7 @@
 <p>if works!</p>
+<div *ngIf="displayIf;else displayOther">
+    <h1>If satisfied</h1>
+</div>
+<ng-template #displayOther>
+<h1>Else satisfied</h1>
+</ng-template>

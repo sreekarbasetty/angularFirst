@@ -1,0 +1,88 @@
+<p>ngstyle works!</p>
+<div class="row d-flex justify-content-center" >
+    <div class="col-3  " style="border-style: solid;color:brown;padding: 10px;">
+        <div style="border: 1px solid black; width: 250px;text-align: center;">
+            <div [ngStyle]="{
+                            backgroundColor:getcolor(255,redcode,redcode)
+                            }" style="width: 250px;">
+                            Red color
+            </div>
+            
+            <p>background color HEX code: {{ getHexCode(255,redcode,redcode)}}</p>
+            <div>
+                Red:<input type="range" name="redcode"
+                min="0" max="255" [(ngModel)]="redcode">
+                <label>{{ redcode }}</label>
+            </div>
+            </div>
+            <br>
+            <div style="border: 1px solid black; width: 250px;text-align: center;">
+            <div [ngStyle]="{
+                backgroundColor:getcolor(greencode,255,greencode)
+                }" style="width: 250px;">
+                Green color
+            </div>
+            <p>background color HEX code: {{ getHexCode(greencode,255,greencode)}}</p>
+            <div>
+                Green:<input type="range" name="greencode"
+                min="0" max="255" [(ngModel)]="greencode">
+                <label>{{ greencode }}</label>
+            </div>
+            </div>
+            <br>
+            <div style="border: 1px solid black; width: 250px;text-align: center;">
+            <div [ngStyle]="{
+                backgroundColor:getcolor(bluecode,bluecode,255)
+                }" style="width: 250px;">
+                Blue color
+            </div>
+            
+            <p>background color HEX code: {{ getHexCode(bluecode,bluecode,255)}}</p>
+            <div>
+                Blue:<input type="range" name="bluecode"
+                min="0" max="255" [(ngModel)]="bluecode">
+                <label>{{ bluecode }}</label>
+            </div>
+            </div>
+    </div>
+    <div class="col-3" style="border-style: solid;color:brown;margin-left: 30px; padding: 10px;">
+        <div style="border: 1px solid black; width: 250px;text-align: center;">
+            Red:<div [ngStyle]="{
+                color:getcolor(255,redtextcode,redtextcode)
+                }">Red Text
+            </div>
+            <p>Font HEX code: {{ getHexCode(255,redtextcode,redtextcode)}}</p>
+            <div>
+                Red:<input type="range" name="redtextcode"
+                min="0" max="255" [(ngModel)]="redtextcode">
+                <label>{{ redtextcode }}</label>
+            </div>
+        </div>
+        <div style="border: 1px solid black; width: 250px;text-align: center;">
+        Green:<p [ngStyle]="{
+            color:getcolor(greentextcode,255,greentextcode)
+            }">Green Text
+            </p>
+            <p>Font HEX code: {{ getHexCode(greentextcode,255,greentextcode)}}</p>
+            <div>
+                Green:<input type="range" name="greentextcode"
+                min="0" max="255" [(ngModel)]="greentextcode">
+                <label>{{ greentextcode }}</label>
+            </div>
+        </div>
+        <div style="border: 1px solid black; width: 250px;text-align: center;">
+            Blue:<p [ngStyle]="{
+                color:getcolor(bluetextcode,bluetextcode,255)
+                }">Blue Text
+                </p>
+                <p>Font HEX code: {{ getHexCode(bluetextcode,bluetextcode,255)}}</p>
+                <div>
+                    Blue:<input type="range" name="bluetextcode"
+                    min="0" max="255" [(ngModel)]="bluetextcode">
+                    <label>{{ bluetextcode }}</label>
+                </div>
+        </div>
+    </div>
+</div>
+
+

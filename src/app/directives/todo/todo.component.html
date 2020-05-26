@@ -1,0 +1,20 @@
+<p>todo works!</p>
+
+Todo Item : <input autofocus type="text" name="todo" [(ngModel)]="todoitem" (keyup)="onKey($event)"/> &nbsp;&nbsp;&nbsp;
+<button type="submit" class=" btn-success" (click)="addTodo()" >Add</button>
+<br>
+Pending: 
+<ol>
+    <li *ngFor="let todo of todos; let counter=index">
+        {{ todo }} &nbsp; <button type="submit" class="btn-info" (click)="addToCompleted(counter)">Done</button>
+    </li>
+
+</ol> 
+
+Completed: 
+<ol>
+    <li *ngFor="let com of CompletedTodos; let counter=index">
+        {{ com }}&nbsp; <button type="submit" class=" btn-danger" (click)="deleteCompleted(counter)">Delete</button>
+    </li>
+
+</ol> 

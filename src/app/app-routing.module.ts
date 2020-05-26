@@ -7,6 +7,9 @@ import { AlldirectivesComponent } from './directives/alldirectives/alldirectives
 import { ForComponent } from './directives/for/for.component';
 import { ReviewComponent } from './parent-child/review/review.component';
 import { ReviewcontainerComponent } from './parent-child/reviewcontainer/reviewcontainer.component';
+import { SwitchcaseComponent } from './directives/switchcase/switchcase.component';
+import { NgstyleComponent } from './directives/ngstyle/ngstyle.component';
+import { TodoComponent } from './directives/todo/todo.component';
 
 
 const routes: Routes = [
@@ -31,6 +34,18 @@ const routes: Routes = [
       {
         path:'fordirective',
         component:ForComponent
+      },
+      {
+        path:'switch',
+        component:SwitchcaseComponent
+      },
+      {
+        path:'style',
+        component:NgstyleComponent
+      },
+      {
+        path:'todo',
+        component:TodoComponent
       }
     ]
    },

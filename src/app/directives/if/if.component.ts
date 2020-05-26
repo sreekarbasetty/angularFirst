@@ -12,4 +12,5 @@ export class IfComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  displayIf: boolean=false;
 }

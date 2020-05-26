@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { Form, FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DummyoneComponent } from './dummyone/dummyone.component';
@@ -18,6 +18,9 @@ import { EngagementComponent } from './parent-child/engagement/engagement.compon
 import { AlldirectivesComponent } from './directives/alldirectives/alldirectives.component';
 import { IfComponent } from './directives/if/if.component';
 import { ForComponent } from './directives/for/for.component';
+import { SwitchcaseComponent } from './directives/switchcase/switchcase.component';
+import { NgstyleComponent } from './directives/ngstyle/ngstyle.component';
+import { TodoComponent } from './directives/todo/todo.component';
 
 @NgModule({
   declarations: [
@@ -36,11 +39,15 @@ import { ForComponent } from './directives/for/for.component';
     EngagementComponent,
     AlldirectivesComponent,
     IfComponent,
-    ForComponent
+    ForComponent,
+    SwitchcaseComponent,
+    NgstyleComponent,
+    TodoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
