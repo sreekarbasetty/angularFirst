@@ -18,7 +18,7 @@ export class TodoComponent implements OnInit {
   addTodo =()=>{
     this.todos.push(this.todoitem);
     this.todoitem = "";
-    
+    //this.todoitem.fo
   }
 
   addToCompleted=(index)=>{

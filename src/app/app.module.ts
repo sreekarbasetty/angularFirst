@@ -21,6 +21,10 @@ import { ForComponent } from './directives/for/for.component';
 import { SwitchcaseComponent } from './directives/switchcase/switchcase.component';
 import { NgstyleComponent } from './directives/ngstyle/ngstyle.component';
 import { TodoComponent } from './directives/todo/todo.component';
+import { AllpipesComponent } from './pipesdemo/allpipes/allpipes.component';
+import { InbuiltComponent } from './pipesdemo/inbuilt/inbuilt.component';
+import { CustomComponent } from './pipesdemo/custom/custom.component';
+import { SortStringArrayPipe } from './custompipes/sort-string-array.pipe';
 
 @NgModule({
   declarations: [
@@ -42,7 +46,11 @@ import { TodoComponent } from './directives/todo/todo.component';
     ForComponent,
     SwitchcaseComponent,
     NgstyleComponent,
-    TodoComponent
+    TodoComponent,
+    AllpipesComponent,
+    InbuiltComponent,
+    CustomComponent,
+    SortStringArrayPipe
   ],
   imports: [
     BrowserModule,

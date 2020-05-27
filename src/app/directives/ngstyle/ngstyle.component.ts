@@ -21,7 +21,7 @@ bluetextcode:number=0;
     return "rgb("+a+","+b+","+c+")"
   }
   
-
+//to convert Hex--start
   getHexCode=(a,b,c)=>{
     return this.rgbToHex(a,b,c);
   }
@@ -32,4 +32,5 @@ bluetextcode:number=0;
     var hex = c.toString(16);
     return hex.length == 1 ? "0" + hex : hex;
   }
+  //to convert Hex--End
 }

@@ -10,6 +10,9 @@ import { ReviewcontainerComponent } from './parent-child/reviewcontainer/reviewc
 import { SwitchcaseComponent } from './directives/switchcase/switchcase.component';
 import { NgstyleComponent } from './directives/ngstyle/ngstyle.component';
 import { TodoComponent } from './directives/todo/todo.component';
+import { AllpipesComponent } from './pipesdemo/allpipes/allpipes.component';
+import { InbuiltComponent } from './pipesdemo/inbuilt/inbuilt.component';
+import { CustomComponent } from './pipesdemo/custom/custom.component';
 
 
 const routes: Routes = [
@@ -46,9 +49,25 @@ const routes: Routes = [
       {
         path:'todo',
         component:TodoComponent
-      }
+      },
+      
     ]
    },
+   {
+    path:'allpipes',
+    component:AllpipesComponent,
+    children:[
+      {
+        path:'inbuilt',
+        component:InbuiltComponent
+      },
+      {
+        path:'custom',
+        component:CustomComponent
+      }   
+
+    ]
+  },
    {
      path:'**',
      component:NotfoundComponent
