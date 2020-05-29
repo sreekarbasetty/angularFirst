@@ -1,6 +1,6 @@
 <p>todo works!</p>
 
-Todo Item : <input autofocus type="text" name="todo" [(ngModel)]="todoitem" (keyup)="onKey($event)"/> &nbsp;&nbsp;&nbsp;
+Todo Item : <input autofocus type="text" name="todo" [(ngModel)]="todoitem" (keyup)="onKey($event)" #addButton/> &nbsp;&nbsp;&nbsp;
 <button type="submit" class=" btn-success" (click)="addTodo()" >Add</button>
 <br>
 Pending: 

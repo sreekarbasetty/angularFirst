@@ -3,6 +3,34 @@
     <div class="col-3  " style="border-style: solid;color:brown;padding: 10px;">
         <div style="border: 1px solid black; text-align: center;">
             <div [ngStyle]="{
+                            backgroundColor:getcolorMixed()
+                            }" >
+                            Red color
+            </div>
+            
+            <p>background color HEX code: {{ getHexCode(red,green,blue)}}</p>
+            <div>
+                Red:<input type="range" name="red"
+                min="0" max="255" [(ngModel)]="red">
+                <label>{{ red }}</label>
+            </div>
+            <div>
+                Green:<input type="range" name="green"
+                min="0" max="255" [(ngModel)]="green">
+                <label>{{ green }}</label>
+            </div>
+            <div>
+                Blue:<input type="range" name="blue"
+                min="0" max="255" [(ngModel)]="blue">
+                <label>{{ blue }}</label>
+            </div>
+            </div>
+    </div>
+</div>
+<div class="row d-flex justify-content-center" >
+    <div class="col-3  " style="border-style: solid;color:brown;padding: 10px;">
+        <div style="border: 1px solid black; text-align: center;">
+            <div [ngStyle]="{
                             backgroundColor:getcolor(255,redcode,redcode)
                             }" >
                             Red color

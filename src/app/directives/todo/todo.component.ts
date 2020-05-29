@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { ElementRef } from "@angular/core";
 
 @Component({
   selector: 'app-todo',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TodoComponent implements OnInit {
 
+  @ViewChild('addButton') addElement:ElementRef
   constructor() { }
 
   ngOnInit(): void {
@@ -18,7 +20,7 @@ export class TodoComponent implements OnInit {
   addTodo =()=>{
     this.todos.push(this.todoitem);
     this.todoitem = "";
-    //this.todoitem.fo
+    this.addElement.nativeElement.focus(); 
   }
 
   addToCompleted=(index)=>{

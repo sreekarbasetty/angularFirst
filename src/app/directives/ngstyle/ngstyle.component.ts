@@ -33,4 +33,11 @@ bluetextcode:number=0;
     return hex.length == 1 ? "0" + hex : hex;
   }
   //to convert Hex--End
+
+  red:number=0;
+ green:number=0;
+ blue:number=0;
+  getcolorMixed(){
+    return "rgb("+this.red+","+this.green+","+this.blue+")"
+  }
 }

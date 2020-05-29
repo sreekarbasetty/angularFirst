@@ -1,0 +1,20 @@
+<p>reactiveform works!</p>
+
+<div>
+    Reactive Form
+</div>
+<form [formGroup]="reactivePersonal" (ngSubmit)="saveFormValue(reactivePersonal)">
+    First Name:
+    <input type="text" formControlName="fname" > {{fname}}
+    <br>
+    Last Name:
+    <input type="text" formControlName="lname"> {{lname}}
+    <br>
+    Programming:
+    <select name="choice" formControlName="choice" >
+        <option value="java">Java</option>
+        <option value="python">python</option>
+        <option value="c++">c++</option>
+    </select>
+    <button type="submit" [disabled]="reactivePersonal.invalid">Submit</button>
+</form>

@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { Form, FormsModule } from '@angular/forms';
+import { Form, FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DummyoneComponent } from './dummyone/dummyone.component';
@@ -25,6 +25,10 @@ import { AllpipesComponent } from './pipesdemo/allpipes/allpipes.component';
 import { InbuiltComponent } from './pipesdemo/inbuilt/inbuilt.component';
 import { CustomComponent } from './pipesdemo/custom/custom.component';
 import { SortStringArrayPipe } from './custompipes/sort-string-array.pipe';
+import { SortnumberPipe } from './custompipes/sortnumber.pipe';
+import { AllformsComponent } from './forms/allforms/allforms.component';
+import { TemplateformComponent } from './forms/templateform/templateform.component';
+import { ReactiveformComponent } from './forms/reactiveform/reactiveform.component';
 
 @NgModule({
   declarations: [
@@ -50,12 +54,17 @@ import { SortStringArrayPipe } from './custompipes/sort-string-array.pipe';
     AllpipesComponent,
     InbuiltComponent,
     CustomComponent,
-    SortStringArrayPipe
+    SortStringArrayPipe,
+    SortnumberPipe,
+    AllformsComponent,
+    TemplateformComponent,
+    ReactiveformComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
