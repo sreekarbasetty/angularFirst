@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Form, FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DummyoneComponent } from './dummyone/dummyone.component';
@@ -29,6 +30,9 @@ import { SortnumberPipe } from './custompipes/sortnumber.pipe';
 import { AllformsComponent } from './forms/allforms/allforms.component';
 import { TemplateformComponent } from './forms/templateform/templateform.component';
 import { ReactiveformComponent } from './forms/reactiveform/reactiveform.component';
+import { ConsumeoneComponent } from './consume/consumeone/consumeone.component';
+import { ConsumetwoComponent } from './consume/consumetwo/consumetwo.component';
+import { RemoteComponent } from './consume/remote/remote.component';
 
 @NgModule({
   declarations: [
@@ -58,13 +62,17 @@ import { ReactiveformComponent } from './forms/reactiveform/reactiveform.compone
     SortnumberPipe,
     AllformsComponent,
     TemplateformComponent,
-    ReactiveformComponent
+    ReactiveformComponent,
+    ConsumeoneComponent,
+    ConsumetwoComponent,
+    RemoteComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

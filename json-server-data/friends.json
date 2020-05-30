@@ -1,0 +1,28 @@
+{
+    "all":[
+            {
+                "id":1,
+                "name":"OBB",
+                "location":"Chennai",
+                "likes":13
+            },
+            {
+                "id":2,
+                "name":"CAS",
+                "location":"Chennai",
+                "likes":17
+            },
+            {
+                "id":3,
+                "name":"BNP",
+                "location":"Chennai",
+                "likes":11
+            },
+            {
+                "id":4,
+                "name":"MLANN",
+                "location":"Chennai",
+                "likes":26
+            }
+    ]
+}

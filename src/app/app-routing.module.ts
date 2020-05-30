@@ -16,6 +16,9 @@ import { CustomComponent } from './pipesdemo/custom/custom.component';
 import { AllformsComponent } from './forms/allforms/allforms.component';
 import { TemplateformComponent } from './forms/templateform/templateform.component';
 import { ReactiveformComponent } from './forms/reactiveform/reactiveform.component';
+import { ConsumeoneComponent } from './consume/consumeone/consumeone.component';
+import { ConsumetwoComponent } from './consume/consumetwo/consumetwo.component';
+import { RemoteComponent } from './consume/remote/remote.component';
 
 
 const routes: Routes = [
@@ -84,6 +87,18 @@ const routes: Routes = [
         component:ReactiveformComponent
       }
     ]
+  },
+  {
+    path:'consumeone',
+    component:ConsumeoneComponent
+  },
+  {
+    path:'consumetwo',
+    component:ConsumetwoComponent
+  },
+  {
+    path:"restapi",
+    component:RemoteComponent
   },
    {
      path:'**',
