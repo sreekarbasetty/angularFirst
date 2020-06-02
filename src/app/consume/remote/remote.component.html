@@ -1,2 +1,10 @@
 <p>remote works!</p>
 <h3>{{ message}}</h3>
+
+<table border="1">
+    <tr *ngFor="let fr of exJson">
+        <td>{{fr.id}}</td>
+        <td>{{fr.name}}</td>
+        <td>{{fr.email}}</td> 
+    </tr>
+</table>

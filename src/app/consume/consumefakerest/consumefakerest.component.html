@@ -1,0 +1,44 @@
+<p>consumefakerest works!</p>
+<button (click)="toggleDisplayAddNewFriendFrom()" [disabled]="displayAddNewFriendForm">Add Friend</button>
+<br>
+<fieldset *ngIf="displayAddNewFriendForm">
+    <legend>Add New</legend>
+    <form #newFriendForm="ngForm" (ngSubmit)="newFriendAdd(newFriendForm)">
+        Name:<input type="text" name ="name" [(ngModel)]="name" req required><br>
+        Location:<input type="text" name ="location" [(ngModel)]="location" required><br>
+        Likes:<input type="text" name ="likes" [(ngModel)]="likes" required readonly><br>
+        <button type="submit" [disabled]="newFriendForm.invalid">Add</button>
+    </form>
+</fieldset>
+<table border="1">
+    <thead>
+        <tr>
+            <td>ID</td>
+            <td>Name</td>
+            <td>Locaion</td>
+            <td>Likes</td>
+            <td colspan="4">Actions</td>
+        </tr>
+    </thead>
+    <tr *ngFor="let fr of friends">
+        <td>{{fr.id}}</td>
+        <td>{{fr.name}}</td>
+        <td>{{fr.location}}</td> 
+        <td>{{fr.likes}}</td>
+        
+            <td>
+                <button>+</button>
+            </td>
+            <td>
+                <button>-</button>
+            </td>
+            <td>
+                <button>Edit</button>
+            </td>
+            <td>
+                <button>Delete</button>
+            </td>       
+            
+        
+    </tr>
+</table>

@@ -9,6 +9,7 @@ import { RestapiService } from 'src/app/services/restapi.service';
 export class RemoteComponent implements OnInit {
 
   message:string=null;
+  exJson:any;
   constructor(private api:RestapiService) { }
 
   ngOnInit(): void {
@@ -18,6 +19,7 @@ export class RemoteComponent implements OnInit {
 
   success=(response)=>{
     console.log(response);
+    this.exJson=response;
   }
 
   failure=()=>{

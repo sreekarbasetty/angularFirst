@@ -19,6 +19,8 @@ import { ReactiveformComponent } from './forms/reactiveform/reactiveform.compone
 import { ConsumeoneComponent } from './consume/consumeone/consumeone.component';
 import { ConsumetwoComponent } from './consume/consumetwo/consumetwo.component';
 import { RemoteComponent } from './consume/remote/remote.component';
+import { ConsumeAllComponent } from './consume/consume-all/consume-all.component';
+import { ConsumefakerestComponent } from './consume/consumefakerest/consumefakerest.component';
 
 
 const routes: Routes = [
@@ -89,17 +91,28 @@ const routes: Routes = [
     ]
   },
   {
-    path:'consumeone',
-    component:ConsumeoneComponent
-  },
-  {
-    path:'consumetwo',
-    component:ConsumetwoComponent
-  },
-  {
-    path:"restapi",
-    component:RemoteComponent
-  },
+    path:'consumeAll',
+    component:ConsumeAllComponent,
+    children:[
+      {
+        path:'consumeone',
+        component:ConsumeoneComponent
+      },
+      {
+        path:'consumetwo',
+        component:ConsumetwoComponent
+      },
+      {
+        path:"restapi",
+        component:RemoteComponent
+      },
+      {
+        path:"JSONserver",
+        component:ConsumefakerestComponent
+      }
+    ]
+  },  
+  
    {
      path:'**',
      component:NotfoundComponent
