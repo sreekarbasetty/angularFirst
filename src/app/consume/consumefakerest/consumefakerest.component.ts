@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RestapiService } from 'src/app/services/restapi.service';
+import { RouterModule, Router } from '@angular/router';
 
 @Component({
   selector: 'app-consumefakerest',
@@ -12,8 +13,10 @@ export class ConsumefakerestComponent implements OnInit {
   name:string;
   location:string;
   likes:number=0;
+  id:number;
   displayAddNewFriendForm: boolean = false
-  constructor(private api:RestapiService) { }
+  displayEditNewFriendForm:boolean =false
+  constructor(private api:RestapiService, private route:Router) { }
 
   ngOnInit(): void {
     this.getAllFriendsFromService();
@@ -35,6 +38,7 @@ export class ConsumefakerestComponent implements OnInit {
               console.log(res);
               this.getAllFriendsFromService()
               this.displayAddNewFriendForm = false
+              
               this.name=""
               this.location=""
               
@@ -44,6 +48,82 @@ export class ConsumefakerestComponent implements OnInit {
   }
   toggleDisplayAddNewFriendFrom=()=>{
     this.displayAddNewFriendForm = !this.displayAddNewFriendForm
+    this.displayEditNewFriendForm = false
     
+  }
+  editSelectedFriend=(eff)=>{
+    console.log(eff.value)
+    this.api.updateFriendById(this.id, eff.value)
+            .subscribe(res=>{
+              console.log(res)
+              this.getAllFriendsFromService()
+              this.displayEditNewFriendForm = false
+              //to make values null in form
+              this.id = null
+              this.name = null
+              this.location = null
+              this.likes = null
+            }, err=>{
+              console.log(err)
+            })
+  }
+  
+  toggleDisplayEditFriendForm=(id)=>{
+    this.displayEditNewFriendForm =true
+    console.log("Edit friend with id: " + id)
+    this.api.getFriendById(id)
+            .subscribe(res =>{
+              console.log(res)
+              this.id = res.id
+              this.name = res.name
+              this.location = res.location
+              this.likes = res.likes
+            }, err=>{
+              console.log(err)
+            })
+  }
+
+  deleteSelectedFriend =(id)=>{
+    this.api.deleteFriendById(id)
+            .subscribe(res=>{
+              console.log(res)
+              this.getAllFriendsFromService()
+            }, err=>{
+              console.log(err)
+            })
+  }
+  addNewFriendInNewPage=()=>{
+    this.route.navigate(['/consumeAll/addnewfriend'])
+  }
+  EditFriendInNewPage=(id)=>{
+    this.route.navigate(['/consumeAll/editfriend',id])
+  }
+
+  increaseLikes=(fr)=>{
+    console.log("increase likes");
+    console.log(fr);
+    fr.likes=fr.likes + 1;
+    console.log(fr);
+    this.api.updateFriendById(fr.id, fr)
+            .subscribe(res=>{
+              console.log(res)
+              this.getAllFriendsFromService()
+              
+            }, err=>{
+              console.log(err)
+            })
+  }
+
+  decreaseLikes=(fr)=>{
+    fr.likes=fr.likes - 1;
+    console.log(fr);
+    this.api.updateFriendById(fr.id, fr)
+            .subscribe(res=>{
+              console.log(res)
+              this.getAllFriendsFromService()
+              
+            }, err=>{
+              console.log(err)
+            })
   }
 }

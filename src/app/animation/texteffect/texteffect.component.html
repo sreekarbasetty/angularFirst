@@ -1,0 +1,8 @@
+<p>texteffect works!</p>
+
+<button (click)="animateMe()">Animate</button>
+<div>
+    <p style="text-align: center;" [@textanimate]='currentState'>
+        Animation to be applied {{currentState}}
+    </p>
+</div>

@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Form, FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http';
+import { BrowserAnimationsModule} from '@angular/platform-browser/animations'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DummyoneComponent } from './dummyone/dummyone.component';
@@ -35,6 +36,12 @@ import { ConsumetwoComponent } from './consume/consumetwo/consumetwo.component';
 import { RemoteComponent } from './consume/remote/remote.component';
 import { ConsumeAllComponent } from './consume/consume-all/consume-all.component';
 import { ConsumefakerestComponent } from './consume/consumefakerest/consumefakerest.component';
+import { AddnewfriendComponent } from './consume/addnewfriend/addnewfriend.component';
+import { EditfriendcomponentComponent } from './consume/editfriendcomponent/editfriendcomponent.component';
+import { ParentComponent } from './eventbinding/parent/parent.component';
+import { ChildComponent } from './eventbinding/child/child.component';
+import { GrandchildComponent } from './eventbinding/grandchild/grandchild.component';
+import { TexteffectComponent } from './animation/texteffect/texteffect.component';
 
 @NgModule({
   declarations: [
@@ -69,14 +76,21 @@ import { ConsumefakerestComponent } from './consume/consumefakerest/consumefaker
     ConsumetwoComponent,
     RemoteComponent,
     ConsumeAllComponent,
-    ConsumefakerestComponent
+    ConsumefakerestComponent,
+    AddnewfriendComponent,
+    EditfriendcomponentComponent,
+    ParentComponent,
+    ChildComponent,
+    GrandchildComponent,
+    TexteffectComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

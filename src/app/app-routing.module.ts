@@ -21,6 +21,10 @@ import { ConsumetwoComponent } from './consume/consumetwo/consumetwo.component';
 import { RemoteComponent } from './consume/remote/remote.component';
 import { ConsumeAllComponent } from './consume/consume-all/consume-all.component';
 import { ConsumefakerestComponent } from './consume/consumefakerest/consumefakerest.component';
+import { AddnewfriendComponent } from './consume/addnewfriend/addnewfriend.component';
+import { EditfriendcomponentComponent } from './consume/editfriendcomponent/editfriendcomponent.component';
+import { ParentComponent } from './eventbinding/parent/parent.component';
+import { TexteffectComponent } from './animation/texteffect/texteffect.component';
 
 
 const routes: Routes = [
@@ -107,12 +111,26 @@ const routes: Routes = [
         component:RemoteComponent
       },
       {
+        path:"addnewfriend",
+        component:AddnewfriendComponent
+      },
+      {
+        path:"editfriend/:friendId",
+        component:EditfriendcomponentComponent
+      },
+      {
         path:"JSONserver",
         component:ConsumefakerestComponent
       }
     ]
   },  
-  
+  {
+    path:'eventbinding',
+    component:ParentComponent
+  },{
+    path:'animation',
+    component:TexteffectComponent
+  },
    {
      path:'**',
      component:NotfoundComponent

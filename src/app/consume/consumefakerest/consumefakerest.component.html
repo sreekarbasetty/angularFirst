@@ -1,13 +1,26 @@
 <p>consumefakerest works!</p>
+<div class="justify-content-center " >
 <button (click)="toggleDisplayAddNewFriendFrom()" [disabled]="displayAddNewFriendForm">Add Friend</button>
+<button (click)="addNewFriendInNewPage()">Add New Friend in new Page</button>
 <br>
 <fieldset *ngIf="displayAddNewFriendForm">
     <legend>Add New</legend>
     <form #newFriendForm="ngForm" (ngSubmit)="newFriendAdd(newFriendForm)">
-        Name:<input type="text" name ="name" [(ngModel)]="name" req required><br>
+        Name:<input type="text" name ="name" [(ngModel)]="name"  required><br>
         Location:<input type="text" name ="location" [(ngModel)]="location" required><br>
         Likes:<input type="text" name ="likes" [(ngModel)]="likes" required readonly><br>
         <button type="submit" [disabled]="newFriendForm.invalid">Add</button>
+    </form>
+</fieldset>
+<br><br>
+<fieldset *ngIf="displayEditNewFriendForm">
+    <legend>Edit</legend>
+    <form #editFriendForm="ngForm" (ngSubmit)="editSelectedFriend(editFriendForm)">
+        Id: {{id}}<br>
+        Name:<input type="text" name ="name" [(ngModel)]="name" required><br>
+        Location:<input type="text" name ="location" [(ngModel)]="location" required><br>
+        Likes:<input type="text" name ="likes" [(ngModel)]="likes" required readonly><br>
+        <button type="submit" [disabled]="editFriendForm.invalid">Edit</button>
     </form>
 </fieldset>
 <table border="1">
@@ -27,18 +40,22 @@
         <td>{{fr.likes}}</td>
         
             <td>
-                <button>+</button>
+                <button (click)="increaseLikes(fr)">+</button>
             </td>
             <td>
-                <button>-</button>
+                <button (click)="decreaseLikes(fr)" [disabled]="!fr.likes">-</button>
             </td>
             <td>
-                <button>Edit</button>
+                <button (click)="toggleDisplayEditFriendForm(fr.id)">Edit</button>
             </td>
             <td>
-                <button>Delete</button>
+                <button (click)="EditFriendInNewPage(fr.id)">Edit On New Page</button>
+            </td>
+            <td>
+                <button (click)="deleteSelectedFriend(fr.id)">Delete</button>
             </td>       
             
         
     </tr>
 </table>
+</div>
